@@ -1,0 +1,22 @@
+{
+  "name": "@ioa/http",
+  "version": "0.0.5",
+  "description": "ioa.js & koa.js http组件",
+  "main": "index.js",
+  "scripts": {
+    "publish": "npm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioa": "^6.0.0-alpha.2",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1"
+  },
+  "files": [
+     "app",
+     "!app/node_modules",
+     "loader.js"
+  ]
+}
