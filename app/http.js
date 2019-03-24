@@ -8,7 +8,7 @@ ioa.http = function () {
    const bodyParser = require('koa-bodyparser');
    const middleware = require('./middleware');
 
-   const { main, NODE_ENV, logger } = ioa;
+   const { main, logger } = ioa;
 
    let port = 8800;
 
@@ -20,8 +20,6 @@ ioa.http = function () {
 
    ioa.port = port;
 
-   logger.log(`NODE_ENV ${NODE_ENV}`);
-
    const koa = new Koa();
    koa.use(bodyParser());
    koa.use(middleware);
@@ -30,6 +28,6 @@ ioa.http = function () {
 
    koa.listen(port);
 
-   logger.log(`HTTP http://localhost:${port}`);
+   logger.log(`http://localhost:${port}`);
 
 }

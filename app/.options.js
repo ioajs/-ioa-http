@@ -1,6 +1,6 @@
 'use strict';
 
-const before = require('./app/router');
+const before = require('./router');
 
 module.exports = {
    "model": {

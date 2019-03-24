@@ -1,7 +1,7 @@
 'use strict';
 
-const loader = require('../loader');
+const { options } = require('@app');
 
 module.exports = {
-   ...loader
+   ...options
 }
