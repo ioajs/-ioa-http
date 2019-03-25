@@ -1,6 +1,6 @@
 {
   "name": "@ioa/http",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "ioa.js & koa.js http组件",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa": "^6.1.0-alpha.1",
+    "ioa": "^6.1.0-alpha.2",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1"
   },
