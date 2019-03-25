@@ -8,11 +8,11 @@ ioa.http = function () {
    const bodyParser = require('koa-bodyparser');
    const middleware = require('./middleware');
 
-   const { main, logger } = ioa;
+   const { $main, logger } = ioa;
 
    let port = 8800;
 
-   const { config } = main;
+   const { config } = $main;
 
    if (config && config.port) {
       port = config.port;

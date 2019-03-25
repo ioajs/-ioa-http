@@ -1,13 +1,20 @@
 'use strict';
 
 module.exports = {
-   "./app": {
+   "./main": {
       "enable": true,
-      options(ioa, options) {
-         Object.assign(ioa.options, options);
-      }
+      "components": {
+         "./app": {
+            "enable": true
+         },
+      },
    },
    "./user": {
       "enable": true,
+      "components": {
+         "./app": {
+            "enable": true
+         },
+      },
    }
 }

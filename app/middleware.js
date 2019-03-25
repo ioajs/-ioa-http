@@ -1,7 +1,7 @@
 'use strict';
 
 const ioa = require('ioa');
-const common = require('./common');
+const common = require('./common.js');
 
 const { logger } = ioa;
 const { routerTree, SymbolWildcard, SymbolName, SymbolMiddleware } = common;

@@ -242,4 +242,21 @@ function router(app) {
 
 }
 
-module.exports = router;
+module.exports = {
+   "middleware": {
+      "level": 30
+   },
+   "controller": {
+      "level": 50,
+      module(func) {
+         if (func.prototype) {
+            return new func();
+         }
+         return func;
+      }
+   },
+   "router": {
+      "level": 100,
+      before: router,
+   }
+};
