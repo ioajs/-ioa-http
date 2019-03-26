@@ -38,7 +38,7 @@ const Resources = {
  */
 function router(app) {
 
-   app.beforeMiddleware = [];
+   app.$beforeMiddleware = [];
 
    /**
     * 
@@ -103,7 +103,7 @@ function router(app) {
 
       iterative[SymbolMiddleware][type] = [
          ...ioa.beforeMiddleware,
-         ...app.beforeMiddleware,
+         ...app.$beforeMiddleware,
          ...middleware,
          controller
       ]
@@ -223,7 +223,7 @@ function router(app) {
       befor(...parameter) {
          for (const item of parameter) {
             if (item) {
-               app.beforeMiddleware.push(item);
+               app.$beforeMiddleware.push(item);
             }
          }
       },
