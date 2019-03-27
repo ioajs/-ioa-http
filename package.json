@@ -1,6 +1,6 @@
 {
   "name": "@ioa/http",
-  "version": "6.3.0-alpha.1",
+  "version": "6.3.0-alpha.2",
   "description": "ioa.js & koa.js http组件",
   "main": "index.js",
   "scripts": {

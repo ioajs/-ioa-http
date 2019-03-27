@@ -6,5 +6,10 @@ const option = require('./option.js');
 app.setOption(option);
 
 module.exports = {
-   "index.js": 200
+   "after.js": {
+      "level": 110,
+   },
+   "http.js": {
+      level: 200
+   },
 }

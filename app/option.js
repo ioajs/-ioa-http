@@ -3,9 +3,9 @@
 const ioa = require('ioa');
 const common = require('./common');
 
-ioa.beforeMiddleware = [];
-const { routerTree, SymbolWildcard, SymbolName, SymbolMiddleware } = common;
+const { SymbolWildcard, SymbolName, SymbolMiddleware } = common;
 
+const { routerTree, allQueue, beforeMiddleware } = common;
 
 // rest路由参数格式约定
 const Resources = {
@@ -31,12 +31,13 @@ const Resources = {
    }
 }
 
+ioa.beforeMiddleware = beforeMiddleware;
 
 /**
  * 为app添加路由依赖
  * @param {*} app 
  */
-function router(app) {
+function before(app) {
 
    app.$beforeMiddleware = [];
 
@@ -70,7 +71,7 @@ function router(app) {
       // 对请求类型进行分组保存
       let iterative = routerTree;
 
-      //将path路径转换为对应的对象索引结构
+      // 将path路径转换为对应的对象索引tree
       for (let name of pathArray) {
 
          let [one, ...cname] = name;
@@ -91,7 +92,7 @@ function router(app) {
                iterative[name] = {}
             }
 
-            iterative = iterative[name]
+            iterative = iterative[name];
 
          }
 
@@ -101,12 +102,15 @@ function router(app) {
          iterative[SymbolMiddleware] = {}
       }
 
-      iterative[SymbolMiddleware][type] = [
-         ...ioa.beforeMiddleware,
+      const list = [
          ...app.$beforeMiddleware,
          ...middleware,
          controller
-      ]
+      ];
+
+      allQueue.push(list);
+
+      iterative[SymbolMiddleware][type] = list;
 
    }
 
@@ -242,6 +246,7 @@ function router(app) {
 
 }
 
+
 module.exports = {
    "middleware": {
       "level": 30
@@ -257,6 +262,6 @@ module.exports = {
    },
    "router": {
       "level": 100,
-      before: router,
+      before,
    }
 };

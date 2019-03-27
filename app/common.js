@@ -5,4 +5,6 @@ module.exports = {
    SymbolName: Symbol('name'), // 参数名Key
    SymbolMiddleware: Symbol('middleware'), // 中间件Key
    routerTree: {}, // 路由字典树
+   allQueue: [], // 所有中间件集合队列
+   beforeMiddleware: [], // 全局中间件队列
 }

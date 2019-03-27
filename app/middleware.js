@@ -4,7 +4,8 @@ const ioa = require('ioa');
 const common = require('./common.js');
 
 const { logger } = ioa;
-const { routerTree, SymbolWildcard, SymbolName, SymbolMiddleware } = common;
+const { SymbolWildcard, SymbolName, SymbolMiddleware } = common;
+const { routerTree, } = common;
 
 /**
  * koa路由参数解析、路由分发中间件
