@@ -246,7 +246,6 @@ function before(app) {
 
 }
 
-
 module.exports = {
    "middleware": {
       "level": 30
