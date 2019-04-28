@@ -1,15 +1,15 @@
 'use strict';
 
 const app = require('@app');
-const option = require('./option.js');
+const levels = require('./levels.js');
 
-app.setOption(option);
+app.setLevels(levels);
 
 module.exports = {
    "after.js": {
-      "level": 110,
+      "level": 90,
    },
    "http.js": {
-      level: 200
+      level: 100
    },
 }

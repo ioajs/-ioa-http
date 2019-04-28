@@ -3,7 +3,7 @@
 const ioa = require('ioa');
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
-const middleware = require('./middleware');
+const middleware = require('./middleware.js');
 
 const { main, logger } = ioa;
 
@@ -25,4 +25,4 @@ ioa.koa = koa;
 
 koa.listen(port);
 
-logger.log(`http://localhost:${port}`);
+logger.log(`http server: http://localhost:${port}`);

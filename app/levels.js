@@ -1,10 +1,9 @@
 'use strict';
 
 const ioa = require('ioa');
-const common = require('./common');
+const common = require('./common.js');
 
 const { SymbolWildcard, SymbolName, SymbolMiddleware } = common;
-
 const { routerTree, allQueue, beforeMiddleware } = common;
 
 // rest路由参数格式约定
@@ -259,8 +258,8 @@ module.exports = {
          return func;
       }
    },
-   "router": {
-      "level": 100,
+   "router.js": {
+      "level": 80,
       before,
    }
 };
