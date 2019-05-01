@@ -6,4 +6,6 @@ router.get('/', 'home.index');
 
 router.get('/sms/:name/:sub', 'home.sms');
 
-router.get('/login', 'home.login');
+router.post('/login', 'home.login');
+
+router.socket('/login', 'home.login');

@@ -1,6 +1,6 @@
 {
   "name": "@ioa/http",
-  "version": "7.0.0-alpha.1",
+  "version": "7.0.0-alpha.3",
   "description": "ioa.js & koa.js http组件",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa": "^7.0.0-alpha.0",
+    "ioa": "^7.0.0-alpha.5",
+    "ioa-router": "^0.0.8",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1"
   },
   "files": [
     "app",
     "!app/node_modules"
-  ]
+  ],
+  "devDependencies": {
+    "axios": "^0.18.0"
+  }
 }

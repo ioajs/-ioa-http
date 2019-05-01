@@ -1,6 +1,6 @@
 'use strict';
 
-class home {
+class Home {
    index(ctx) {
       ctx.body = 'hello ioa';
    }
@@ -16,4 +16,4 @@ class home {
    }
 }
 
-module.exports = home
+module.exports = Home;
