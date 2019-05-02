@@ -8,4 +8,4 @@ router.get('/sms/:name/:sub', 'home.sms');
 
 router.post('/login', 'home.login');
 
-router.socket('/login', 'home.login');
+router.on('/login', 'home.login');
