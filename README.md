@@ -8,104 +8,48 @@
 npm install @ioa/http
 ```
 
-
-### Usage
-
 ```js
-const ioa = require('ioa')
+const ioa = require('ioa');
 
-ioa.loader();
-
-ioa.http();
-```
-
-
-#### 预设.loader.js配置选项
-
-预设.loader.js配置项是为http serve应用场景预设的加载配置项目，建议按需加载，配置示例如下：
-
-```js
-// app.config.js
-module.exports = {
-   "./app": {
+ioa.loader({
+   "./main": {
       "enable": true,
-      options(ioa, options) {
-         Object.assign(ioa.options, options);
-      }
+      "components": {
+         "@ioa/http": {
+            "enable": true
+         },
+      },
    },
-   "./user": {
-      "enable": true,
-   }
-}
-
-// .loader.js
-const { options } = require('@app');
-
-module.exports = {
-   ...options,
-   "other": {
-      level: 100
-   }
-}
-
+});
 ```
 
 ### 路由
 
-app.router对象中提供了befor、get、post、put、delele路由声明方法，支持用resources批量定义RESTful路由。
-
-* router.befor(middleware) 定义应用级的全局前置中间件，该中间件仅作用于当前应用，并在所有其它路由配置中间件之前执行。
-
-#### 示例代码
-
-``` js
-const { router, middleware, controller } = require('@app');
-
-const { cors, auth } = middleware;
-
-const { home } = controller;
-
-router.befor(cors);
-
-router.befor(auth);
-
-router.get('/', home.index);
-```
-
-### 路由模式
-
-ioa中同时支持声明式和自动寻址两种路由模式：
-
-
-#### 声明式路由
-
-声明式路由具有高度灵活和可定制url的特性。允许随意定义url格式，调用任意middleware、controller，但每个url都需要单独定义。
+路由按作用域可分为全局路由、应用级路由、应用内路由三种，示例如下：
 
 ```js
 const { router } = require('@app')
 
-router.get('/', 'index.home')
+router.global("cors"); // 全局路由，跨应用，添加到所有path路由中间件之前
 
-router.get('/sms/:sid/sd/:id', 'index.sms')
+router.befor("token"); // 应用级路由，中间件仅在当前应用内生效
 
-router.post('/sms/:sid/sd/:sid', 'index.sms')
+router.get('/', "token", 'index.home'); // 应用内路由
 
-router.post('/login', 'index.login')
+router.get('/sms/:sid/sd/:id', 'index.sms');
 
-router.put('/login', 'index.login')
+router.post('/sms/:sid/sd/:sid', 'index.sms');
 
-router.delele('/login', 'index.login')
+router.post('/login', 'index.login');
 
-// 分组路由
-router.group('admin', {
-    "login": ['index.login'],
-    "sms": ['index.sms'],
-    "cc": {
-        "xx": ['index.xx'],
-        "jj": ['index.jj']
-    },
-})
+router.put('/login', 'index.login');
+
+router.delele('/login', 'index.login');
 ```
+
+#### 声明式路由
+
+声明式路由具有高度灵活和可定制url的特性。允许随意定义url格式，调用任意middleware、controller，但每个url都需要单独定义。
 
 #### 自动寻址路由
 
@@ -138,37 +82,6 @@ router.resources('/rest', 'rest')
 ### 中间件
 
 在$app/middleware目录下添加中间件文件，框架自动载入并进行类型检测。
-
-#### 路由中间件
-
-在路由中使用中间件时，通过app.middleware引用中间件，插入到配置项中。
-
-```js
-const { test, token } = app.middleware
-
-router.get('/', test, token, 'index.home')
-```
-
-#### 应用级中间件
-
-应用级中间件的作用域仅在当前应用内有效，配置示例如下：
-
-```js
-const { test, token } = app.middleware
-
-router.get('/', test, token, 'index.home')
-```
-
-
-#### 全局中间件
-
-当需要使用全局中间件时，通过app.AppsMiddleware数组进行添加。
-
-```js
-const cors = require('@koa/cors')
-
-app.AppsMiddleware.push(cors({ origin: '*' }))
-```
 
 
 ### model
