@@ -17,7 +17,9 @@ if (config && config.port) {
 const koa = new Koa();
 
 koa.use(bodyParser());
+
 koa.use(routerMiddleware);
+
 koa.listen(port);
 
 logger.log(`http server: http://localhost:${port}`);

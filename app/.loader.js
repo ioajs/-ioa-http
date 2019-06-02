@@ -6,7 +6,7 @@ const levels = require('ioa-router/lib/levels.js');
 component.shared('levels', levels);
 
 module.exports = {
-   "http.js": {
+   "koa.js": {
       level: 100
    },
 }
