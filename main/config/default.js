@@ -2,7 +2,7 @@
 
 module.exports = {
    'components': {
-      "./app": {
+      "./lib": {
          "port": 8600
       }
    },
