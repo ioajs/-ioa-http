@@ -1,6 +1,6 @@
 {
   "name": "@ioa/koa",
-  "version": "8.0.3",
+  "version": "9.0.0",
   "description": "ioa.js & koa.js http组件",
   "scripts": {
     "publish": "npm publish --access public",
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa": "^8.0.1",
-    "ioa-router": "^0.2.1",
+    "ioa": "^9.0.1",
+    "ioa-router": "^9.0.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1"
   },
