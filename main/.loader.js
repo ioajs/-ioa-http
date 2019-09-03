@@ -1,7 +1,7 @@
 'use strict';
 
-const { levels } = require('@app');
+const { loads } = require('@app');
 
 module.exports = {
-   ...levels
+   ...loads
 }

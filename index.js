@@ -6,17 +6,13 @@ ioa.loader({
    "./main": {
       "enable": true,
       "components": {
-         "./lib": {
-            "enable": true
-         },
+         "./lib/": true,
       },
    },
    "./user": {
       "enable": true,
       "components": {
-         "./lib": {
-            "enable": true,
-         },
+         "./lib/": true,
       },
    }
 });
