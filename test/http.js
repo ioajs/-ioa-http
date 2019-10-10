@@ -1,5 +1,6 @@
 'use strict';
 
+require('../index.js');
 const test = require('jtf');
 const axios = require('axios');
 
