@@ -4,6 +4,7 @@ const app = require('@app');
 
 app.on("./lib");
 
-module.exports = {
+app.loader({
    "config": false,
-}
+   "middleware": false,
+})

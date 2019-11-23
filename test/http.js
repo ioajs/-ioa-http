@@ -9,16 +9,16 @@ axios.defaults.baseURL = 'http://localhost:8600';
 
 test('get /', async t => {
 
-   const { data } = await axios.get("/")
+   const { data } = await axios.get("/");
 
-   t.deepEqual(data, 'hello ioa')
+   t.deepEqual(data, 'hello ioa');
 
 });
 
 
 test('get /sms/:name/:sub', async t => {
 
-   let { data } = await axios.get("/sms/sub/1232");
+   const { data } = await axios.get("/sms/sub/1232");
 
    t.deepEqual(data, {
       name: "sub",
@@ -43,8 +43,8 @@ test('post /login', async t => {
 
 test('get /user/:name', async t => {
 
-   const { data } = await axios.get("/user/666")
+   const { data } = await axios.get("/user/666");
 
-   t.deepEqual(data, { name: "666" })
+   t.deepEqual(data, { name: "666" });
 
 });
