@@ -1,11 +1,11 @@
-## @ioa/http
+## @ioa/koa
 
 集成koa.js、路由及相关配套服务的http组件
 
 ### Install
 
 ```
-npm install @ioa/http
+npm install @ioa/koa
 ```
 
 ```js
@@ -15,7 +15,7 @@ ioa.loader({
    "./main": {
       "enable": true,
       "components": {
-         "@ioa/http": {
+         "@ioa/koa": {
             "enable": true
          },
       },
