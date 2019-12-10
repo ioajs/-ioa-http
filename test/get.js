@@ -1,11 +1,7 @@
 'use strict';
 
-require('../index.js');
 const test = require('jtf');
 const axios = require('axios');
-
-axios.defaults.baseURL = 'http://localhost:8600';
-
 
 test('get /', async t => {
 
@@ -27,19 +23,6 @@ test('get /sms/:name/:sub', async t => {
 
 });
 
-
-test('post /login', async t => {
-
-   const body = { id: '666', kk: '888' };
-
-   const { data } = await axios.post("/login", body);
-
-   t.deepEqual(data, {
-      type: 'login',
-      body
-   })
-
-});
 
 test('get /user/:name', async t => {
 
