@@ -2,7 +2,7 @@
 
 const app = require('@app');
 
-app.on("./lib");
+app.use("./lib");
 
 app.loader({
    "config": false,

@@ -11,7 +11,7 @@ npm install @ioa/koa
 ```js
 const ioa = require('ioa');
 
-ioa.loader("./main");
+ioa.app("./main");
 ```
 
 ### 路由
@@ -85,8 +85,3 @@ router.resources('/rest', 'rest')
 > 支持Class、Object、箭头函数三种方式定义controller，不支持用普通函数直接定义controller（目前仅通过有无prototype来区分，所有包含prototype属性的函数均被视为构造函数）
 
 在$app/controller目录下创建控制器文件，框架自动载入并进行类型检测，支持多级目录分组。
-
-
-### 日志
-
-日志功能由loggercc模块提供，参考链接：https://github.com/xiangle/loggercc

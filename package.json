@@ -1,6 +1,6 @@
 {
   "name": "@ioa/koa",
-  "version": "9.7.10",
+  "version": "9.8.0",
   "description": "ioa.js & koa.js http组件",
   "scripts": {
     "publish": "npm publish --access public",
@@ -19,6 +19,6 @@
   "devDependencies": {
     "@ioa/config": "^9.5.0",
     "axios": "^0.18.0",
-    "ioa": "^9.7.6"
+    "ioa": "^9.8.6"
   }
 }

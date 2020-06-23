@@ -2,4 +2,4 @@
 
 const ioa = require('ioa');
 
-ioa.loader("./main", "./user");
+ioa.app("./main", "./user");

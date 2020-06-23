@@ -2,8 +2,8 @@
 
 const app = require('@app');
 
-app.on("@ioa/config");
-app.on("./lib");
+app.use("@ioa/config");
+app.use("./lib");
 
 app.loader({
    "middleware": false,
