@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('jtf');
+const test = require('jmr');
 const axios = require('axios');
 
 test('post /login', async t => {

@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('jtf');
+const test = require('jmr');
 const axios = require('axios');
 
 test('get /', async t => {
@@ -10,7 +10,6 @@ test('get /', async t => {
    t.deepEqual(data, 'hello ioa');
 
 });
-
 
 test('get /sms/:name/:sub', async t => {
 
@@ -22,7 +21,6 @@ test('get /sms/:name/:sub', async t => {
    })
 
 });
-
 
 test('get /user/:name', async t => {
 
