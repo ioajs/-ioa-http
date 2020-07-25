@@ -1,6 +1,6 @@
 {
   "name": "@ioa/koa",
-  "version": "9.8.1",
+  "version": "9.8.2",
   "description": "ioa.js & koa.js http组件",
   "scripts": {
     "publish": "npm publish --access public",
