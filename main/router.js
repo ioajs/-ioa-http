@@ -1,6 +1,10 @@
 'use strict';
 
-const { router } = require('@app');
+const { router, middleware } = require('@app');
+
+router.global(middleware.global);
+
+router.before(middleware.before);
 
 router.get('/', 'home.index');
 

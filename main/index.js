@@ -4,7 +4,3 @@ const app = require('@app');
 
 app.use("@ioa/config");
 app.use("./lib");
-
-app.loader({
-   "middleware": false,
-})
