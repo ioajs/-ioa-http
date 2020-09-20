@@ -21,9 +21,9 @@ ioa.app("./main");
 ```js
 const { router } = require('@app')
 
-router.global("cors"); // 全局路由，跨应用，添加到所有path路由中间件之前
+router.global(cors); // 全局路由，跨应用，添加到所有path路由中间件之前
 
-router.befor("token"); // 应用级路由，中间件仅在当前应用内生效
+router.befor(token); // 应用级路由，中间件仅在当前应用内生效
 
 router.get('/', "token", 'index.home'); // 应用内路由
 
