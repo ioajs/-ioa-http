@@ -1,15 +1,15 @@
 {
   "name": "@ioa/koa",
-  "version": "9.8.5",
+  "version": "9.8.12",
   "description": "ioa.js & koa.js http组件",
   "scripts": {
-    "publish": "npm publish --access public",
+    "pub": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa-router": "^9.8.2",
+    "ioa-router": "^9.8.4",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0"
   },
@@ -17,8 +17,8 @@
     "lib"
   ],
   "devDependencies": {
-    "@ioa/config": "^9.5.0",
+    "@ioa/config": "^10.0.0",
     "axios": "^0.18.0",
-    "ioa": "^9.8.6"
+    "ioa": "^10.0.2"
   }
 }
