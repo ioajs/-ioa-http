@@ -9,7 +9,7 @@ npm install @ioa/koa
 ```
 
 ```js
-const ioa = require('ioa');
+import ioa from 'ioa';
 
 ioa.app("./main");
 ```
@@ -19,7 +19,8 @@ ioa.app("./main");
 路由按作用域可分为全局路由、应用级路由、应用内路由三种，示例如下：
 
 ```js
-const { router } = require('@app')
+import ioa from 'ioa';
+const { router } = ioa.app;
 
 router.global(cors); // 全局路由，跨应用，添加到所有path路由中间件之前
 
