@@ -1,6 +1,6 @@
-'use strict';
+import ioa from 'ioa';
 
-const { router, middleware } = require('@app');
+const { router, middleware } = ioa.app;
 
 router.global(middleware.global);
 

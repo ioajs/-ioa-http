@@ -1,12 +1,10 @@
-'use strict';
-
 class Controller {
   init(ctx) {
     ctx.body = 'hello ioa';
   }
 }
 
-module.exports = class extends Controller {
+export default class extends Controller {
   index(ctx) {
     this.init(ctx);
     // ctx.body = 'hello ioa';

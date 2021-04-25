@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default  {
    "lib": {
       "port": 8600,
       // "debug": true,
