@@ -9,9 +9,19 @@ npm install @ioa/koa
 ```
 
 ```js
+// 根入口文件
 import ioa from 'ioa';
 
 ioa.app("./main");
+```
+
+```js
+// 应用入口文件
+import ioa from 'ioa';
+const { app } = ioa;
+
+app.use("@ioa/config");
+app.use("@ioa/koa");
 ```
 
 ### 路由
