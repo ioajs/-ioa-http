@@ -1,7 +1,7 @@
 {
   "name": "@ioa/koa",
   "type": "module",
-  "version": "11.0.1",
+  "version": "11.0.2",
   "description": "ioa.js & koa.js http组件",
   "scripts": {
     "pub": "npm publish --access public",
@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa-router": "^11.0.1",
-    "koa": "^2.11.0",
+    "ioa-router": "^11.0.2",
+    "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0"
   },
   "files": [
@@ -20,6 +20,6 @@
   "devDependencies": {
     "@ioa/config": "^11.0.1",
     "axios": "^0.18.0",
-    "ioa": "^11.0.5-rc"
+    "ioa": "^11.0.6-rc"
   }
 }
