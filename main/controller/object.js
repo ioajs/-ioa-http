@@ -1,4 +1,4 @@
-export default  {
+export default {
   index(ctx) {
     ctx.body = 'object';
   }

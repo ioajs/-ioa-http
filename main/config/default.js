@@ -1,5 +1,5 @@
-export default  {
-   "lib": {
+export default {
+   "./lib": {
       "port": 8600,
       // "debug": true,
       "parser": {
