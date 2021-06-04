@@ -12,7 +12,7 @@ npm install @ioa/koa
 // 根入口文件
 import ioa from 'ioa';
 
-ioa.app("./main");
+ioa.apps("./main");
 ```
 
 ```js
@@ -20,8 +20,8 @@ ioa.app("./main");
 import ioa from 'ioa';
 const { app } = ioa;
 
-app.use("@ioa/config");
-app.use("@ioa/koa");
+app.component("@ioa/config");
+app.component("@ioa/koa");
 ```
 
 ### 路由

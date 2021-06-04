@@ -2,9 +2,9 @@ import ioa from 'ioa';
 
 const { app } = ioa;
 
-app.use("./lib");
+app.component("./lib");
 
-app.loader({
+app.import({
    "config": false,
    "middleware": false,
 })

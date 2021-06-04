@@ -3,4 +3,4 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:8600';
 
-await ioa.loadApp("./main", "./user");
+await ioa.apps("./main", "./user");

@@ -2,10 +2,10 @@ import ioa from 'ioa';
 
 const { app } = ioa;
 
-app.use("@ioa/config");
-app.use("./lib");
+app.component("@ioa/config");
+app.component("./lib");
 
-app.loader({
+app.import({
   "router": {
     "level": 50
   },
