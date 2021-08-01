@@ -1,6 +1,6 @@
 import ioa from 'ioa';
 
-const { router } = ioa.app;
+const { router } = ioa.app();
 
 router.get('/router/test', ctx => {
 
